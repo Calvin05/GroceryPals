@@ -13337,11 +13337,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SONY\\Downloads\\GROUP3NetworkEquipment\\VCNNetworkEquipment\\VCNNetworkEquipment.csproj",
+      "projectUniqueName": "C:\\Users\\SONY\\Desktop\\project1-Grocery-Pals-\\VCNNetworkEquipment\\VCNNetworkEquipment.csproj",
       "projectName": "VCNNetworkEquipment",
-      "projectPath": "C:\\Users\\SONY\\Downloads\\GROUP3NetworkEquipment\\VCNNetworkEquipment\\VCNNetworkEquipment.csproj",
+      "projectPath": "C:\\Users\\SONY\\Desktop\\project1-Grocery-Pals-\\VCNNetworkEquipment\\VCNNetworkEquipment.csproj",
       "packagesPath": "C:\\Users\\SONY\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SONY\\Downloads\\GROUP3NetworkEquipment\\VCNNetworkEquipment\\obj\\",
+      "outputPath": "C:\\Users\\SONY\\Desktop\\project1-Grocery-Pals-\\VCNNetworkEquipment\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

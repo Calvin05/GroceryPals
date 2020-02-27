@@ -121,3 +121,14 @@ C:\Users\SONY\Downloads\GROUP3NetworkEquipment\VCNNetworkEquipment\obj\Debug\net
 C:\Users\SONY\Downloads\GROUP3NetworkEquipment\VCNNetworkEquipment\obj\Debug\netcoreapp2.1\VCNNetworkEquipment.dll
 C:\Users\SONY\Downloads\GROUP3NetworkEquipment\VCNNetworkEquipment\obj\Debug\netcoreapp2.1\VCNNetworkEquipment.pdb
 C:\Users\SONY\Downloads\GROUP3NetworkEquipment\VCNNetworkEquipment\obj\Debug\netcoreapp2.1\VCNNetworkEquipment.csprojAssemblyReference.cache
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\bin\Debug\netcoreapp2.1\VCNNetworkEquipment.deps.json
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\bin\Debug\netcoreapp2.1\VCNNetworkEquipment.runtimeconfig.json
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\bin\Debug\netcoreapp2.1\VCNNetworkEquipment.runtimeconfig.dev.json
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\bin\Debug\netcoreapp2.1\VCNNetworkEquipment.dll
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\bin\Debug\netcoreapp2.1\VCNNetworkEquipment.pdb
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\obj\Debug\netcoreapp2.1\VCNNetworkEquipment.csprojAssemblyReference.cache
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\obj\Debug\netcoreapp2.1\VCNNetworkEquipment.csproj.CoreCompileInputs.cache
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\obj\Debug\netcoreapp2.1\VCNNetworkEquipment.AssemblyInfoInputs.cache
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\obj\Debug\netcoreapp2.1\VCNNetworkEquipment.AssemblyInfo.cs
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\obj\Debug\netcoreapp2.1\VCNNetworkEquipment.dll
+C:\Users\SONY\Desktop\project1-Grocery-Pals-\VCNNetworkEquipment\obj\Debug\netcoreapp2.1\VCNNetworkEquipment.pdb
