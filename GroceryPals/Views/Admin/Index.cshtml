@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Product>
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+@{
+    ViewBag.Title = "All Products";
+    Layout = "_Layout";
+}
+<link rel="stylesheet" asp-href-include="~/css/bootstrap.min.css" />
+<link rel="stylesheet" asp-href-include="~/css/body.css" />
+<div>
+    <div style="margin-top:140px;" class="mx-auto w-75">
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+            @if (TempData["message"] != null)
+            {
+                <div class="alert alert-success">@TempData["message"]</div>
+            }
+            <table class="table table-striped table-bordered table-sm table-light"  data-aos="fade-down">
+                <tr>
+                    <th class="text-right">ID</th>
+                    <th>Name</th>
+                    <th class="text-right">Price</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr id="tbrow">
+                        <td class="text-right">@item.ProductID</td>
+                        <td>@item.Name</td>
+                        <td class="text-right">@item.Price.ToString("c")</td>
+                        <td class="text-center">
+                            <form asp-action="Delete" method="post">
+                                <a asp-action="Edit" class="btn btn-sm btn-warning"
+                                   asp-route-productId="@item.ProductID">
+                                    Edit
+                                </a>
+                                <input type="hidden" name="ProductID" value="@item.ProductID" />
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+            <div class="text-center">
+                <a asp-action="Create" class="btn btn-primary"  data-aos="fade-up" >Add Product</a>
+                <a asp-action="List" asp-controller="Order" class="btn btn-primary" data-aos="fade-up"  data-aos-delay="250">Ship Order</a>
+                <a asp-action="Index" asp-controller="Account" class="btn btn-primary"  data-aos="fade-up"  data-aos-delay="500">Manage Account</a>
+
+            </div>
+        }
+        else
+        {
+
+            <div class="text-center">
+
+                <h2 class="display-4">Only Admin can access this page!</h2>
+
+                <h3 style="font-weight:300"> Click <a asp-controller="Product" asp-action="Index">here </a>to return to Home page</h3>
+                <h3 style="font-weight:300"> Or click <a asp-controller="Account" asp-action="Login">here </a>to go to Log In page</h3>
+                <img data-aos="fade-left" data-aos-duration="1000" src="~/images/Sorry.png" />
+            </div>
+        }
+    </div>
+
+
