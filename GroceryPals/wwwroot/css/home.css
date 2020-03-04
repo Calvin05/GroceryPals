@@ -1,7 +1,3 @@
-/*Viet Cuong Nguyen
-    300973502
-    Assigment 3
-*/
 body {
   color: #96a0ad;
   font-family: "source-sans-pro", arial, sans-serif !important;
@@ -381,5 +377,59 @@ footer #footerLeft {
     background-color: white;
     margin-top: 140px;
     padding: 50px 20px 50px 20px ;
+}
+
+.home-paragraph {
+    color: #fff;
+}
+
+.intro-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0 !important;
+}
+
+.intro-paragraph {
+    margin: 0;
+    text-align: center;
+}
+
+.intro-location {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* map styling */
+
+#map {
+    width: 900px;
+    max-width: 100%;
+    height: 500px;
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.store-navbar {
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.store-button {
+    margin: 0.5rem;
+}
+
+.clear-button {
+    margin-left: 2rem;
+}
+
+.location-button {
+    margin-top: 0.3rem;
 }
 

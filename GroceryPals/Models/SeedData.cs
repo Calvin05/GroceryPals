@@ -21,92 +21,110 @@ namespace GroceryPals.Models
 						Name = "Banana",
 						Description = "Organic, Healthy..",
 						Category = "Fruit",
-						Price = 25.99,
+						Price = 2.99,
 						Year = "2020",
 						FreeShip = "Free Ship"
 					},
 					new Product
 					{
-						Name = "Banana",
+						Name = "Mango",
 						Description = "Organic, Healthy..",
 						Category = "Fruit",
-						Price = 25.99,
+						Price = 3.50,
 						Year = "2020",
 						FreeShip = "Free Ship"
 					},
 					new Product
 					{
-						Name = "Banana",
+						Name = "Pineapple",
 						Description = "Organic, Healthy..",
 						Category = "Fruit",
-						Price = 25.99,
+						Price = 6.99,
 						Year = "2020",
 						FreeShip = "Free Ship"
 					},
 					new Product
 					{
-						Name = "Banana",
+						Name = "Lemons",
 						Description = "Organic, Healthy..",
 						Category = "Fruit",
-						Price = 25.99,
+						Price = 1.49,
 						Year = "2020",
 						FreeShip = "Free Ship"
 					},
 					new Product
 					{
-						Name = "Banana",
-						Description = "Organic, Healthy..",
-						Category = "Fruit",
-						Price = 25.99,
+						Name = "Skinless Chicken Breast",
+						Description = "Boneless, raised without antibiotics",
+						Category = "Meat",
+						Price = 16.99,
 						Year = "2020",
 						FreeShip = "Free Ship"
 					},
 					new Product
 					{
-						Name = "Banana",
-						Description = "Organic, Healthy..",
-						Category = "Fruit",
-						Price = 25.99,
+						Name = "Sirloin Club Steak",
+						Description = "2 Steaks per tray",
+						Category = "Meat",
+						Price = 10.09,
 						Year = "2020",
 						FreeShip = "Free Ship"
 					},
 					new Product
 					{
-						Name = "Banana",
+						Name = "Sliced Pork Belly",
 						Description = "Organic, Healthy..",
-						Category = "Fruit",
-						Price = 25.99,
+						Category = "Meat",
+						Price = 4.85,
 						Year = "2020",
 						FreeShip = "Free Ship"
 					},
 					new Product
 					{
-						Name = "Banana",
-						Description = "Organic, Healthy..",
-						Category = "Fruit",
-						Price = 25.99,
+						Name = "Lean Ground Beef",
+						Description = "0.5kg 96% lean beef",
+						Category = "Meat",
+						Price = 8.99,
 						Year = "2020",
 						FreeShip = "Free Ship"
 					},
 					new Product
 					{
-						Name = "Banana",
-						Description = "Organic, Healthy..",
-						Category = "Fruit",
-						Price = 25.99,
+						Name = "Lays Classic Chips",
+						Description = "Family size",
+						Category = "Grocery",
+						Price = 2.99,
 						Year = "2020",
 						FreeShip = "Free Ship"
 					},
 					new Product
 					{
-						Name = "Banana",
-						Description = "Organic, Healthy..",
-						Category = "Fruit",
-						Price = 25.99,
+						Name = "2% Plain Greek Yogurt",
+						Description = "Healthy, plain probiotic",
+						Category = "Dairy",
+						Price = 4.99,
 						Year = "2020",
 						FreeShip = "Free Ship"
-					}
-					);
+					},
+                    new Product
+                    {
+                        Name = "Honey Nut Cheerios",
+                        Description = "Cereal",
+                        Category = "Grocery",
+                        Price = 5.49,
+                        Year = "2020",
+                        FreeShip = "Free Ship"
+                    },
+                    new Product
+                    {
+                        Name = "Frozen Thin Crust Pizza",
+                        Description = "Margherita, delissio",
+                        Category = "Grocery",
+                        Price = 2.99,
+                        Year = "2020",
+                        FreeShip = "Free Ship"
+                    }
+                    );
 				context.SaveChanges();
 			}
 		}

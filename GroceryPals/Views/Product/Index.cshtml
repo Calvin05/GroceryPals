@@ -2,26 +2,44 @@
 @{
     Layout = "_Layout";
 }
-    <div class="intro">
-        <h1 class="white margin-bottom-double" data-aos="fade-down" data-aos-duration="1700">Shopping faster and smarter</h1>
-        <div class="headline" data-aos="fade-up">
+<div class="intro">
+    <h1 class="white margin-bottom-double" data-aos="fade-down" data-aos-duration="1700">Shopping faster and smarter</h1>
+    <div class="headline" data-aos="fade-up">
 
-            <h2 data-aos="fade-left" data-aos-delay="300">Fresh and Afforable Grocery, Anywhere, Anytime.  </h2>
-            <P>
-                <a data-aos="fade-right"  data-aos-delay="300">GroceryPals is an online store with various finest grocices. Our goal is make your shopping more easy and convenient. Established in the beginning of 2020, our store is one of fastest growing online store in Canada. </a>
-            </P>
-            <div class="icon">
-                <img src="/images/star.png" data-aos="fade-up"  data-aos-delay="500">
-                <img src="/images/star.png" data-aos="fade-up"  data-aos-delay="300">
-                <img src="/images/star.png" data-aos="fade-up">
-                <img src="/images/star.png" data-aos="fade-up"  data-aos-delay="300">
-                <img src="/images/star.png" data-aos="fade-up"  data-aos-delay="500">
-                 
-        </div>
-        </div>
-        
+        <h2 data-aos="fade-left" data-aos-delay="300">Fresh and Afforable Grocery, Anywhere, Anytime.  </h2>
+        <p class="home-paragraph">
+            <a data-aos="fade-right"  data-aos-delay="300">GroceryPals is an online store with various finest grocices. Our goal is make your shopping more easy and convenient. Established in the beginning of 2020, our store is one of fastest growing online store in Canada. </a>
+        </p>
+        <div class="icon">
+            <img src="/images/star.png" data-aos="fade-up"  data-aos-delay="500">
+            <img src="/images/star.png" data-aos="fade-up"  data-aos-delay="300">
+            <img src="/images/star.png" data-aos="fade-up">
+            <img src="/images/star.png" data-aos="fade-up"  data-aos-delay="300">
+            <img src="/images/star.png" data-aos="fade-up"  data-aos-delay="500">
+             
     </div>
-    <div class="category">
+    </div>
+    
+</div>
+
+<div class="map-section">
+    <h1 id="introduction" class="intro-title">Getting Started</h1>
+    <p class="intro-paragraph">Find the nearest eligible grocery pal location below! Select your favourite store and get started with your order now!</p>
+
+    <h4 class="intro-location">Selected Location: <span id="defaultStoreLocation"></span></h4>
+    <div class="store-navbar">
+        <button type="button" class="btn btn-outline-primary store-button" onclick="getWalmartLocations()">Walmart</button>
+        <button type="button" class="btn btn-outline-success store-button" onclick="getLoblawsLocations()">Loblaws</button>
+        <button type="button" class="btn btn-outline-danger store-button" onclick="getMetroLocations()">Metro</button>
+        <button type="button" class="btn btn-outline-secondary store-button" onclick="getCostcoLocations()">Costco</button>
+        <button type="button" class="btn btn-light clear-button" onclick="clearLocations()">Clear Map</button>
+    </div>
+    <div class="frame">
+        <div id="map"></div>
+    </div>
+</div>
+
+<div class="category">
         <h1 id="introduction"> Product of The Week</h1>
         <div class="item1" data-aos="fade-up-left">
             <div class="info">
@@ -120,5 +138,8 @@
       
     </div>
          
-        </div>
+</div>
+<script src="~/scripts/map.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgjwg52WsrccDXjSvIs9yLv0BbfVIN3gY&callback=getLocation"
+        type="text/javascript"></script>
 
