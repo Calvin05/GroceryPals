@@ -189,12 +189,12 @@ footer {
     width: 100%;
     position: relative;
     bottom: 0;
-    background-color: rgb(55,55,55);
+    background-color: #1C2331;
     text-align: center;
     margin-top: 50px;
     padding: 10px 0 10px 0;
-    height: 160px;
-    box-sizing:unset !important;
+    height: 180px;
+    box-sizing: unset !important;
 }
 
 footer h2 {
@@ -203,7 +203,11 @@ footer h2 {
 
 footer p {
     font-size: 14px !important;
+   
 }
+    footer #picon {
+        font-size: 14px !important;
+    }
 footer #footerLeft {
     margin:0;
     margin-left:7%;
@@ -262,6 +266,13 @@ footer #footerLeft {
         #allpage-thanks {
             height: 60vh;
         }
+footer .fline {
+    margin: 0px;
+    margin-bottom:15px;
+    margin-top:5px;
+    border: 0.5px solid #673ab7;
+   width:100px;
+}
 
 
 #info {
