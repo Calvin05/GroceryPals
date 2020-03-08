@@ -22,3 +22,16 @@ C:\Users\alvin\Desktop\Projects\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\
 C:\Users\alvin\Desktop\Projects\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.AssemblyInfo.cs
 C:\Users\alvin\Desktop\Projects\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.dll
 C:\Users\alvin\Desktop\Projects\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.pdb
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\libman.json
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.deps.json
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.runtimeconfig.json
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.runtimeconfig.dev.json
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.dll
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.pdb
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.csprojAssemblyReference.cache
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.AssemblyInfoInputs.cache
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.AssemblyInfo.cs
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.dll
+C:\Users\jyliu\Documents\GitHub\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.pdb

@@ -30,7 +30,6 @@
             </div>
 
             <a asp-action="History" asp-controller="Order" id="history"><span>Order History</span></a>
-         
 
         }
     </div>
@@ -40,7 +39,6 @@
             <input type="text" placeholder="Search.." name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-
         @foreach (var item in Model.Products)
         {
             @Html.Partial("ProductSummary", item)

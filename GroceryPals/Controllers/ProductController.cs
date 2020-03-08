@@ -38,6 +38,7 @@ namespace GroceryPals.Controllers
 		public ViewResult List(int productPage = 1)
 			=> View(new ProductListViewModel
 			{
+
 				Products = repository.Products
 				
 				.Skip((productPage - 1) * PageSize)
@@ -51,11 +52,32 @@ namespace GroceryPals.Controllers
 					TotalItems = repository.Products.Count()
 				}
 			});
-		//public ViewResult List() => View(repository.Products);
 
-		//Form to add item
 
-		public ViewResult Reform(int productId) =>
+        [AllowAnonymous]
+        public ViewResult Search(String content,int productPage = 1)
+            => View(new ProductListViewModel
+            {
+             //   String content="";
+               // Products = repository.Products.SelectMany(Product=>Product.Name)
+
+                Products = repository.Products
+                .Skip((productPage - 1) * PageSize)
+                ////.OrderBy(p=> repository.Products.ToArray().Length)
+                .Take(PageSize),
+
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = productPage,
+                    ItemsPerPage = PageSize,
+                    TotalItems = repository.Products.Count()
+                }
+            });
+        //public ViewResult List() => View(repository.Products);
+
+        //Form to add item
+
+        public ViewResult Reform(int productId) =>
 		View(repository.Products
 		.FirstOrDefault(p => p.ProductID == productId));
 
@@ -102,9 +124,11 @@ namespace GroceryPals.Controllers
 			return RedirectToAction("List");
 		}
 
-		
 
-		public ViewResult AddComment(int productId) =>
+     
+
+
+        public ViewResult AddComment(int productId) =>
 		View(repository.Products
 		.FirstOrDefault(p => p.ProductID == productId));
 
