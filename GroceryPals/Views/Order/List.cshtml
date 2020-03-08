@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Order>
+@{
+    ViewBag.Title = "Orders";
+    Layout = "_Layout";
+}
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/body.css" rel="stylesheet" />
+<div>
+    <div style="margin-top:130px;" class="mx-auto w-75">
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+            @if (Model.Count() > 0)
+            {
+                <table class="table table-bordered table-striped table-light">
+                    <tr><th>Name</th><th>Postal Code</th><th colspan="2">Details</th><th></th></tr>
+                    @foreach (Order o in Model)
+                    {
+                        <tr>
+                            <td>@o.Name</td>
+                            <td>@o.PCode</td>
+                            <td>@o.Customer</td>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <td>
+                                <form asp-action="MarkShipped" method="post">
+                                    <input type="hidden" name="orderId" value="@o.OrderID" />
+                                    <button type="submit" class="btn btn-sm btn-danger">
+                                        Ship
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        @foreach (CartLine line in o.Lines)
+                        {
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>@line.Product.Name</td>
+                                <td>@line.Quantity</td>
+                                <td></td>
+                            </tr>
+                        }
+                    }
+                </table>
+            }
+            else
+            {
+                <div class="text-center">No Unshipped Orders</div>
+            }
+        }
+        else
+        {
+            <div class="text-center">
+
+                <h2 class="display-3">Only Admin can access this page!</h2>
+
+                <h3 style="font-weight:300"> Click <a asp-controller="Product" asp-action="Index">here </a>to return to HomePage</h3>
+                <h3 style="font-weight:300"> Or click <a asp-controller="Account" asp-action="Login">here </a>to go to Log In page</h3>
+                <img src="~/images/Sorry.png" />
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@model ProductListViewModel
+
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "List of Products";
+}
+
+<link href="~/css/List.css" rel="stylesheet" />
+<link asp-href-include="~/lib/font-awesome/css/*.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+<div class="row m-1 p-1" style="margin-top:130px !important">
+    <div class="w-100" style="padding:0 1em 1em 1em;">
+        @if (TempData["message"] != null)
+        {
+            <div class="alert alert-success" style="transition:.5s">@TempData["message"]</div>
+        }
+    </div>
+    <div id="categories" class="col-3 text-center">
+        <h2 style="font-size: 2.5em;background-color: lightsalmon;padding: 5px 0px 5px 10px;border-radius: 5px;"> List of Products</h2>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="card card-outline-primary mt-5 p-1 text-center">
+
+                <div>
+                    @await Component.InvokeAsync("CartSummary")
+                </div>
+            </div>
+
+            <a asp-action="History" asp-controller="Order" id="history"><span>Order History</span></a>
+         
+
+        }
+    </div>
+
+    <div class="col-9">
+        <form class="search-container" asp-action="Search" method="post">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+        @foreach (var item in Model.Products)
+        {
+            @Html.Partial("ProductSummary", item)
+        }
+        <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+             page-class="btn" page-class-normal="btn-secondary"
+             page-class-selected="btn-primary" class="btn-group pull-left m-1">
+        </div>
+
+    </div>
+</div>
+
