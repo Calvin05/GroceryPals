@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Order>
+@{
+    ViewBag.Title = "Orders";
+    Layout = "_Layout";
+}
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/body.css" rel="stylesheet" />
+    <div style="margin-top:140px;" class="mx-auto w-75">
+        <div class="text-center"><h1>Order History</h1></div>
+        @foreach (Order o in Model)
+        {
+            @if (o.Customer == @User.Identity.Name)
+            {
+                <table class="table table-bordered table-striped table-light" data-aos="zoom-in">
+                    <tr><th>Name</th><th>Postal Code</th><th colspan="2">Details</th></tr>
+
+                    <tr>
+                        <td>@o.Name</td>
+                        <td>@o.PCode</td>
+                        <th>Product</th>
+                        <th>Quantity</th>
+
+                    </tr>
+                    @foreach (CartLine line in o.Lines)
+                    {
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>@line.Product.Name</td>
+                            <td>@line.Quantity</td>
+
+                        </tr>
+
+                    }
+                </table>
+            }
+
+        }
+    </div>

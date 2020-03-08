@@ -1,0 +1,45 @@
+﻿@model Product
+
+
+<link rel="stylesheet" href="/css/form.css">
+<div class="form" data-aos="fade-up">
+    <div class="head">
+        <h1>ADD ITEM</h1>
+        <h3>Please fill out the form below</h3>
+    </div>
+    <form asp-action="Edit" method="post">
+        @*<div asp-validation-summary="All"></div>*@
+        @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+        @*<label asp-for="ProductID">Product ID: <span>*</span></label>
+            <div><span asp-validation-for="ProductID" class="text-danger"></span></div>
+            <input class="form-control" asp-for="ProductID" />*@
+        <input type="hidden" asp-for="ProductID" />
+        <label asp-for="Name">Product Name: <span>*</span> </label>
+        <div><span asp-validation-for="Name" class="text-danger"></span></div>
+        <input class="form-control" asp-for="Name" />
+        <label asp-for="Price">Price: <span>*</span> </label>
+        <div><span asp-validation-for="Price" class="text-danger"></span></div>
+        <input class="form-control" asp-for="Price" />
+        <label asp-for="Year">Year:</label>
+        <input class="form-control" asp-for="Year" />
+
+
+        <label asp-for="Category">Category</label>
+        <input class="form-control" asp-for="Category" />
+        <label asp-for="FreeShip">Shipment: <span>*</span></label>
+        <div><span asp-validation-for="FreeShip" class="text-danger"></span></div>
+        <select class="form-control" asp-for="FreeShip">
+            <option value="">Select options</option>
+            <option value="Free Ship">Free Ship</option>
+            <option value="Apply Fee">With Fee</option>
+        </select>
+        <label asp-for="Description">Description:</label>
+        <textarea class="form-control" asp-for="Description"></textarea>
+
+        <div class="submit">
+            <button type="submit">Save</button>
+            <button asp-action="Index">Cancel</button>
+
+        </div>
+    </form>
+</div>
