@@ -13,5 +13,10 @@
   <ItemGroup>
     <Folder Include="Migrations\AppIdentityDb\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Update="Views\Account\Confirm.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
 
 </Project>

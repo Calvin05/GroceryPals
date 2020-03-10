@@ -14,5 +14,7 @@ namespace GroceryPals.Models
 		public string Role { get; set; }
 		[Required(ErrorMessage = "Please Specify Account Type")]
 		public string Password { get; set; }
+		[Required(ErrorMessage = "Please Enter Email")]
+		public string Email { get; set; }
 	}
 }
