@@ -1,0 +1,37 @@
+﻿@model AuthenticationModel
+
+@{
+    ViewBag.Title = "Confirm";
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="/css/form.css">
+<div style="height:72vh;">
+
+    <div class="form" data-aos="fade-up" style="width:30%">
+        <div class="head">
+            <h1>Authentication</h1>
+        </div>
+        <form asp-action="Confirm" asp-controller="Account" method="post">
+            <div class="text-danger" asp-validation-summary="All" style="text-align: center;font-weight: bolder;"></div>
+            <h3 style="color:black;">We sent a verification code to your email</h3>
+            <label for="code">Please Enter:</label>
+            <input asp-for="Verification" class="form-control" />
+            <div class="submit">
+                <button type="submit">Confirm<i class="fa fa-check-circle" aria-hidden="true" style="margin-left:4px;"></i></button>
+                <a asp-action="Logout" asp-controller="Account" id="logout" style="width: 100px;
+                                                                                height: 40px;
+                                                                                text-align: center;
+                                                                                font-size: 20px;
+                                                                                border-radius: 5px;
+                                                                                margin-right: 35px;
+                                                                                font-family: 'Lato', sans-serif;
+                                                                                background-color: gray;">Cancel<i class="fa fa-times-circle" aria-hidden="true" style="margin-left:4px;"></i></a>
+            </div>
+        </form>
+       
+    </div>
+
+
+
+</div>

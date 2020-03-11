@@ -39,9 +39,7 @@ namespace GroceryPals.Controllers
 			{
 
 				Products = repository.Products
-				
 				.Skip((productPage - 1) * PageSize)
-				////.OrderBy(p=> repository.Products.ToArray().Length)
 				.Take(PageSize),
 			
 				PagingInfo = new PagingInfo

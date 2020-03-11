@@ -302,11 +302,12 @@ footer .fline {
 }
 #userinfo a {
     display:block;
-    width:85px;
+    width:100px;
 }
     #userinfo p {
+        text-align:center;
         display: block;
-        width: 85px;
+        width: 100px;
     }
 
 
@@ -330,10 +331,11 @@ footer .fline {
 }
 
 #login-info {
-    margin-top: 140px;
+    margin: 0 auto;
+    margin-top: 170px;
     text-align: center;
     background-color: rgba(0,0,0,.5);
-  
+  width:900px;
 }
 
 
