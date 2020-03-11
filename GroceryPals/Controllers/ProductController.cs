@@ -8,10 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using GroceryPals.Models;
 using GroceryPals.Models.ViewModels;
 
-/*Viet Cuong Nguyen
-    300973502
-    Assigment 4
-*/
+
 
 namespace GroceryPals.Controllers
 {
@@ -21,6 +18,8 @@ namespace GroceryPals.Controllers
 
 		public int PageSize = 4;
 		private readonly Expression<Func<Product, object>> lenght;
+
+
 
 		public ProductController(IProductRepository repo)
 		{
@@ -58,13 +57,14 @@ namespace GroceryPals.Controllers
         public ViewResult Search(String content,int productPage = 1)
             => View(new ProductListViewModel
             {
+
              //   String content="";
                // Products = repository.Products.SelectMany(Product=>Product.Name)
 
                 Products = repository.Products
                 .Skip((productPage - 1) * PageSize)
                 ////.OrderBy(p=> repository.Products.ToArray().Length)
-                .Take(PageSize),
+                .Take(PageSize).Where(p=>p.Name.Contains("na")),
 
                 PagingInfo = new PagingInfo
                 {
@@ -73,6 +73,7 @@ namespace GroceryPals.Controllers
                     TotalItems = repository.Products.Count()
                 }
             });
+
         //public ViewResult List() => View(repository.Products);
 
         //Form to add item
