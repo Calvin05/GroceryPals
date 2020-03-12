@@ -8,6 +8,14 @@
     min-height: 100%;
 }
 
+.search-container{
+    margin:10px 0px !important;
+}
+
+.filter{
+    padding:5px !important;
+    margin:5px !important;
+}
 /*.col-9 .card:nth-child(2n+1) .test1 {
     border: 1px solid dodgerblue;
 }

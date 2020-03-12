@@ -36,27 +36,29 @@
     </div>
 
     <div class="col-9">
-        <form class="search-container" asp-action="Search" method="post">
-            <input type="text" placeholder="Search.." name="search" id="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-        <form class="search-container">
-            <select>
+        <form class="search-container" asp-action="Search" asp-controller="Product" style="margin:10px 0px;">
+
+            <select asp-for="ProdCat" asp-items="Model.Cats" class="filter" style=" padding:5px;margin:5px;">
+                <option value="">All</option>
                 <option value="Fruit">Fruit</option>
                 <option value="Meat">Meat</option>
                 <option value="Dairy">Dairy</option>
                 <option value="Grocery">Grocery</option>
             </select>
-            
-        </form>
-        <form class="search-container">
-            <select>
-                <option value="0~1.99">0~1.99</option>
-                <option value="2~4.99">2~4.99</option>
-                <option value="5~9.99">5~9.99</option>
-                <option value=">10.00">>10.00</option>
+
+            <select asp-for="ProdPrice" asp-items="Model.Prices" class="filter" style=" padding:5px;margin:5px;">
+                <option value="">All</option>
+                <option value="0,1.99">0~1.99</option>
+                <option value="2,4.99">2~4.99</option>
+                <option value="5,9.99">5~9.99</option>
+                <option value="10,100000000">>10.00</option>
             </select>
+
+            <span class="name" style="color:white;">Name:</span>   <input type="text" placeholder="Search.." name="SearchString" id="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
         </form>
+       
+        
 
         @foreach (var item in Model.Products)
         {

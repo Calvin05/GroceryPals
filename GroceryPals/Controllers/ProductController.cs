@@ -7,8 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using GroceryPals.Models;
 using GroceryPals.Models.ViewModels;
-
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GroceryPals.Controllers
 {
@@ -52,7 +51,7 @@ namespace GroceryPals.Controllers
 
 
         [AllowAnonymous]
-        public ViewResult Search(String content,int productPage = 1)
+        public ViewResult Search1(String searchString, int productPage = 1)
             => View(new ProductListViewModel
             {
 
@@ -62,7 +61,7 @@ namespace GroceryPals.Controllers
                 Products = repository.Products
                 .Skip((productPage - 1) * PageSize)
                 ////.OrderBy(p=> repository.Products.ToArray().Length)
-                .Take(PageSize).Where(p=>p.Name.Contains("na")),
+                .Take(PageSize).Where(p=>p.Name.Contains(searchString)),
 
                 PagingInfo = new PagingInfo
                 {
@@ -71,6 +70,55 @@ namespace GroceryPals.Controllers
                     TotalItems = repository.Products.Count()
                 }
             });
+
+        [AllowAnonymous]
+        public ViewResult Search(String prodCat, String searchString,String prodPrice, int productPage = 1)
+           
+            {
+            IQueryable<string> genreQuery = from m in repository.Products
+                                            orderby m.Category
+                                            select m.Category;
+
+            //   String content="";
+            // Products = repository.Products.SelectMany(Product=>Product.Name)
+
+            var products = from m in repository.Products
+                           select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(s => s.Name.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(prodCat))
+            {
+               products = products.Where(x => x.Category == prodCat);
+            }
+
+            
+            if (!string.IsNullOrEmpty(prodPrice))
+            {
+                string[] someArray = prodPrice.Split(new char[] { ',' });
+                double low = Convert.ToDouble(someArray[0]);
+                double hight = Convert.ToDouble(someArray[1]);
+                products = products.Where(x => x.Price >=low);
+                products = products.Where(x => x.Price <= hight);
+            }
+
+            var prodVM = new ProductListViewModel
+            {
+                Cats = new SelectList(genreQuery.Distinct().ToList()),
+                Products = products.ToList(),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = productPage,
+                    ItemsPerPage = PageSize,
+                    TotalItems = repository.Products.Count()
+                }
+            };
+
+            return View(prodVM);
+        }
 
         //public ViewResult List() => View(repository.Products);
 
