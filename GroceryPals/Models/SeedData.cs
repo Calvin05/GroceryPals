@@ -123,6 +123,56 @@ namespace GroceryPals.Models
                         Price = 2.99,
                         Year = "2020",
                         FreeShip = "Free Ship"
+                    },
+
+                    new Product
+                    {
+                        Name = "Tostada",
+                        Description = "Mexican Corn Chip",
+                        Category = "Snacks",
+                        Price = 6.99,
+                        Year = "2021",
+                        FreeShip = "No Free Ship"
+                    },
+
+                    new Product
+                    {
+                        Name = "Grammy's Chicken Legs",
+                        Description = "Fried Chicken Legs",
+                        Category = "Meat",
+                        Price = 10.99,
+                        Year = "2020",
+                        FreeShip = "Free Shipping"
+                    },
+
+                    new Product
+                    {
+                        Name = "Celary",
+                        Description = "Healthy Celary Slices",
+                        Category = "Vegetable",
+                        Price = 4.99,
+                        Year = "2022",
+                        FreeShip = "Free Shipping"
+                    },
+
+                    new Product
+                    {
+                        Name = "Breyer's Ice Cream",
+                        Description = "Chocolate Ice Cream",
+                        Category = "Frozen",
+                        Price = 7.99,
+                        Year = "2020",
+                        FreeShip = "Free Shipping"
+                    },
+
+                    new Product
+                    {
+                        Name = "X-treme Carrots",
+                        Description = "Sliced Carrot Sticks",
+                        Category = "Vegetable",
+                        Price = 6.99,
+                        Year = "2021",
+                        FreeShip = "Free Shipping"
                     }
                     );
 				context.SaveChanges();

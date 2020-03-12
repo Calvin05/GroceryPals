@@ -48,3 +48,14 @@ C:\Users\300973502\Downloads\GroceryPals-master\GroceryPals\obj\Debug\netcoreapp
 C:\Users\300973502\Downloads\GroceryPals-master\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.AssemblyInfo.cs
 C:\Users\300973502\Downloads\GroceryPals-master\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.dll
 C:\Users\300973502\Downloads\GroceryPals-master\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.pdb
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.deps.json
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.runtimeconfig.json
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.runtimeconfig.dev.json
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.dll
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\bin\Debug\netcoreapp2.1\GroceryPals.pdb
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.csprojAssemblyReference.cache
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.csproj.CoreCompileInputs.cache
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.AssemblyInfoInputs.cache
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.AssemblyInfo.cs
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.dll
+C:\Users\SMALL\Desktop\GroceryPals\GroceryPals\obj\Debug\netcoreapp2.1\GroceryPals.pdb
