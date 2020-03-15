@@ -30,6 +30,14 @@ function initMap(position) {
         position: myMapCenter,
         title: 'my location'
     });
+
+    // info window for current location
+    google.maps.event.addListener(marker, 'click', function () {
+        infoWindow.setContent(
+            '<h5>Your current location</h5>'
+        );
+        infoWindow.open(map, marker);
+    });
 }
 
 // Function to get user location 
@@ -61,6 +69,8 @@ function clearLocations() {
 
 // Re-initialize the map with markers at all walmart locations
 function getWalmartLocations() {
+
+    clearLocations();
 
     const walmartStores = [
         {
@@ -127,16 +137,22 @@ function getWalmartLocations() {
         google.maps.event.addListener(marker, 'click', function() {
             currentSelected = walmartStores[i].address;
 
+            map.panTo(this.getPosition());
+
             infoWindow.setContent(html + '<br/>' +
                 '<button type="button" class="btn btn-primary location-button" onclick="setStoreLocation()">Set Location</button>');
             infoWindow.open(map, marker);
           });
     }
+
+    map.setZoom(11);
 }
 
 // Re-initialize the map with markers at all Loblaws locations
 function getLoblawsLocations(){
 
+    clearLocations();
+    
     const loblawsStores = [
         {
             position: new google.maps.LatLng(43.735304, -79.404278),
@@ -201,15 +217,22 @@ function getLoblawsLocations(){
         google.maps.event.addListener(marker, 'click', function() {
             currentSelected = loblawsStores[i].address;
 
+            map.panTo(this.getPosition());
+
             infoWindow.setContent(html + '<br/>' +
                 '<button type="button" class="btn btn-primary location-button" onclick="setStoreLocation()">Set Location</button>');
             infoWindow.open(map, marker);
           });
     };
+
+    map.setZoom(11);
 }
 
 // Re-initialize the map with markers at all Metro locations
-function getMetroLocations(){
+function getMetroLocations() {
+
+    clearLocations();
+
     const metroStores = [
         {
             position: new google.maps.LatLng(43.7577822, -79.3145775),
@@ -274,15 +297,22 @@ function getMetroLocations(){
         google.maps.event.addListener(marker, 'click', function() {
             currentSelected = metroStores[i].address;
 
+            map.panTo(this.getPosition());
+
             infoWindow.setContent(html + '<br/>' +
                 '<button type="button" class="btn btn-primary location-button" onclick="setStoreLocation()">Set Location</button>');
             infoWindow.open(map, marker);
           });
     };
+
+    map.setZoom(11);
 }
 
 // Re-initialize the map with markers at all Costco locations
-function getCostcoLocations(){
+function getCostcoLocations() {
+
+    clearLocations();
+
     const costcoStores = [
         {
             position: new google.maps.LatLng(43.759388,-79.297859),
@@ -341,11 +371,15 @@ function getCostcoLocations(){
         google.maps.event.addListener(marker, 'click', function() {
             currentSelected = costcoStores[i].address;
 
+            map.panTo(this.getPosition());
+
             infoWindow.setContent(html + '<br/>' +
                 '<button type="button" class="btn btn-primary location-button" onclick="setStoreLocation()">Set Location</button>');
             infoWindow.open(map, marker);
           });
     };
+
+    map.setZoom(11);
 }
 
 // Set store location 
