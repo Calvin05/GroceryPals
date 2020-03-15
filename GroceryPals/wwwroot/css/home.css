@@ -427,6 +427,13 @@ footer .fline {
     margin-right: auto;
 }
 
+.order-button {
+    display: flex !important;
+    margin-top: 3rem;
+    max-width: 66vw;
+    color: #fff !important;
+}
+
 .store-navbar {
     margin: auto;
     padding: 1rem;
