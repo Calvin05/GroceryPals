@@ -135,15 +135,22 @@ header ol.nav li + li {
 }
 
 .category {
+    margin-top: 50px;
     text-align: center;
+    background-color: #faf0e6;
+    padding-bottom:50px;
 }
-#introduction{
+#introduction {
     color: #e9573e;
     text-transform: uppercase;
     font-size: 5em;
-    background-color: #fff;
+    background-color: #faf0e6;
     padding: 50px 0 50px 0;
+    font-weight:bolder;
+    margin-bottom:0px;
+
 }
+
 .item1, .item2 {
     width: 70%;
     display: inline-flex;
@@ -171,6 +178,7 @@ header ol.nav li + li {
 .info h1 {
     font-size: 3em;
     color: #e9573e;
+    margin-top:20px;
 }
 .item1 .img{
     padding-right: 30px;
@@ -191,7 +199,7 @@ footer {
     bottom: 0;
     background-color: #1C2331;
     text-align: center;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     padding: 10px 0 10px 0;
     height: 180px;
     box-sizing: unset !important;
