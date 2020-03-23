@@ -44,20 +44,25 @@ namespace GroceryPals.Controllers
 			{
 				order.Lines = cart.Lines.ToArray();
 				repository.SaveOrder(order);
-				return RedirectToAction(nameof(Completed));
+				return RedirectToAction(nameof(payment));
 			}
-			else
+            else
 			{
 				return View(order);
 			}
 		}
-		public ViewResult Completed()
+        public ViewResult payment()
 		{
 			cart.Clear();
 			return View();
 		}
+        public ViewResult completed()
+        {
+            cart.Clear();
+            return View();
+        }
 
-		public IActionResult History() =>
+        public IActionResult History() =>
 			View(repository.Orders);
 	}
 }
