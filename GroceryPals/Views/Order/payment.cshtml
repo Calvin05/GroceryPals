@@ -1,0 +1,77 @@
+﻿<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/body.css" rel="stylesheet" />
+<div id="Payment">
+    <div class="mx-auto w-50 text-center" id="checkout1" data-aos="fade-up">
+        <div>
+
+            <h2>Check out now</h2>
+            <hr class="mb-1">
+            <br />
+            <div class="d-flex justify-content-center">
+                <form action="payment" method="post" class="needs-validation">
+                    <h3 style="text-align:center;">Payment</h3>
+                    <br />
+
+
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="debit" name="cardType" value="Visa Debit" type="radio"
+                                   class="custom-control-input" checked required> <label class="custom-control-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="cardType" value="Visa Credit" type="radio"
+                                   class="custom-control-input" required> <label class="custom-control-label" for="credit">Credit card</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-20 mb-3">
+                            <label for="cc-name">Name on card</label> <input type="text"
+                                                                             name="nameOnCard" class="form-control" id="cc-name"
+                                                                             required>
+                            <div class="invalid-feedback">Name on card is required</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-15 mb-3">
+                            <label for="cc-number">Card number</label> <input type="text" name="cardNumber" class="form-control" id="cc-number"
+                                                                              required>
+                            <div class="invalid-feedback">Credit card number is required</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 mb-3">
+                            <label for="cc-expiration">Expiry Date</label>
+                            <input type="number" name="expiryDate" class="form-control" id="cc-expiration" required>
+                            <div class="invalid-feedback">Expiration date required</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 mb-3">
+                            <label for="cc-cvv">CVC</label>
+                            <input type="number" min="100" max="999" name="cvc" class="form-control" id="cc-cvv" required>
+                            <div class="invalid-feedback">CVC required</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 mb-3">
+                            <label for="cc-country">Country</label>
+                            <input type="text" name="country" class="form-control" id="cc-country" required>
+                            <div class="invalid-feedback"> Country required</div>
+                        </div>
+
+                        <div class="col-md-10 mb-3">
+                            <label for="cc-zipCode">Zip Code</label>
+                            <input type="text" name="zipCode" class="form-control" id="cc-zipCode" required>
+                            <div class="invalid-feedback">Zip code required</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-primary" asp-action="completed" asp-controller="Order">
+                            confirm
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
