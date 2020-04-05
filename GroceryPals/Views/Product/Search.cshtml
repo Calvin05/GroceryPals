@@ -35,9 +35,9 @@
     </div>
 
     <div class="col-9">
-        <form class="search-container" asp-action="Search" asp-controller="Product" style="margin:10px 0px;">
+        <form class="search-container form-inline" asp-action="Search" asp-controller="Product" style="margin:10px 0px;">
 
-            <select asp-for="ProdCat" asp-items="Model.Cats" class="filter" style=" padding:5px;margin:5px;">
+            <select asp-for="ProdCat" class="custom-select mr-sm-2" asp-items="Model.Cats" style=" padding:5px;margin:5px; width:100px;">
                 <option value="">All</option>
                 <option value="Fruit">Fruit</option>
                 <option value="Meat">Meat</option>
@@ -45,7 +45,7 @@
                 <option value="Grocery">Grocery</option>
             </select>
 
-            <select asp-for="ProdPrice" asp-items="Model.Prices" class="filter" style=" padding:5px;margin:5px;">
+            <select asp-for="ProdPrice" asp-items="Model.Prices" class="custom-select mr-sm-2" style=" padding:5px;margin:5px; width:100px;">
                 <option value="">All</option>
                 <option value="0,1.99">0~1.99</option>
                 <option value="2,4.99">2~4.99</option>
@@ -53,8 +53,8 @@
                 <option value="10,100000000">>10.00</option>
             </select>
 
-            <span class="name" style="color:white;">Name:</span>   <input type="text" placeholder="Search.." name="SearchString" id="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Name" name="SearchString" id="search" class="form-control w-25">
+            <button type="submit" class="btn btn-primary ml-2"><i class="fa fa-search"></i></button>
         </form>
 
 
